@@ -90,7 +90,7 @@ public final class DataTypeUtil {
         return normalizeDecimalValue(bigDecimal, carbonMeasure.getPrecision());
       case SHORT:
       case INT:
-        return Double.valueOf(msrValue).longValue();
+        return Integer.valueOf(msrValue);
       case LONG:
         return Long.valueOf(msrValue);
       default:
