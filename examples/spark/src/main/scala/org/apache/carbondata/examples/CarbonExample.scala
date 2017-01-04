@@ -33,6 +33,7 @@ object CarbonExample {
 
     cc.sql("DROP TABLE IF EXISTS t3")
 
+
     // Create table, 6 dimensions, 1 measure
     cc.sql("""
            CREATE TABLE IF NOT EXISTS t3
@@ -40,6 +41,8 @@ object CarbonExample {
            name String, phonetype String, serialname char(10), salary Int)
            STORED BY 'carbondata'
            """)
+
+    cc.sql("desc t3").show()
 
     // Currently there are two data loading flows in CarbonData, one uses Kettle as ETL tool
     // in each node to do data loading, another uses a multi-thread framework without Kettle (See

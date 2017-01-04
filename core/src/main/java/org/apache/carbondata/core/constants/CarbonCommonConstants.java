@@ -580,7 +580,11 @@ public final class CarbonCommonConstants {
   /**
    * BIG_INT_MEASURE
    */
-  public static final char BIG_INT_MEASURE = 'l';
+  public static final char BIG_INT_MEASURE = 'l';/**
+
+   * INT_MEASURE
+   */
+  public static final char INT_MEASURE = 'i';
 
   /**
    * This determines the size of array to be processed in data load steps. one

@@ -348,7 +348,9 @@ public class SortTempFileChunkHolder implements Comparable<SortTempFileChunkHold
             measures[index++] = stream.readDouble();
           } else if (aggType[i] == CarbonCommonConstants.BIG_INT_MEASURE) {
             measures[index++] = stream.readLong();
-          } else {
+          } else if (aggType[i] == CarbonCommonConstants.INT_MEASURE) {
+            measures[index++] = stream.readInt();
+          }else {
             int len = stream.readInt();
             byte[] buff = new byte[len];
             stream.readFully(buff);
